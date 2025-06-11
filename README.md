@@ -1,2 +1,2 @@
-# Clock-
-clock using react hooks
+# Live Clock
+live clock using react hooks
