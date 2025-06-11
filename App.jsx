@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 function LiveClock() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
@@ -7,8 +6,6 @@ function LiveClock() {
     const timer = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
     }, 1000);
-
-    // Cleanup to avoid memory leak
     return () => clearInterval(timer);
   }, []);
 
@@ -19,5 +16,4 @@ function LiveClock() {
     </div>
   );
 }
-
 export default LiveClock;
